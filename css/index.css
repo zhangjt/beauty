@@ -151,7 +151,7 @@ opacity: 0;
 .layer .cp-name:before,.layer .cp-name:after{content: "";display: inline-block;width: 14px;height: 2px;background: #6c6c6c;vertical-align: top;position: relative;top: 12px;}
 
 .cp-tit {
-    margin: 5px 0 10px 0;
+    margin: 5px 0 5px 0;
     font-size: 10px;
     color: #9198de;
     text-align: center;
