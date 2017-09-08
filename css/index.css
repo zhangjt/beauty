@@ -102,10 +102,10 @@ opacity: 0;
     line-height: 30px;
 }
 .team p{
-	margin: 0;
-	height: 30px;
-    line-height: 30px;
-    font-size: 14px;
+  margin: 0;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
 }
 
 /*P4_products_detail*/
