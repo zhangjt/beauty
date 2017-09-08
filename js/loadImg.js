@@ -41,6 +41,7 @@
 	// 音乐开启/关闭
 	musicInit:function () {
 		var loading=document.getElementById('loading'),
+			main=document.getElementById('main'),
 			music=document.getElementById('music'),
 			audio=document.getElementById('audio');
 			//~运算字符:~2==-3;~1==-2;~-1==0;0?==false?
@@ -50,6 +51,7 @@
 			// 'touchstart';
 
 		loading.style.display="none";
+		main.style.display="block";
 		audio.autoplay = "autoplay";
 		music.classList.add("rotate");
 		audio.play(); 
