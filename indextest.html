@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	#mapAreaImg{
+		background: yellow;
+/*		position: absolute;*/
+		width:100%;
+
+
+
+	}
+	</style>
+</head>
+<body>
+
+
+<img id="mapAreaImg" src="img/p4_btn_click.png"  usemap="#clickBtn"  >
+<map name="clickBtn" id="clickBtn" >
+
+	<area shape="circle" coords="100,210,30" id="area1" onclick="alert('1')" href="#" style="background:blue">
+	<area shape="circle" coords="250,210,30" id="area2" onclick="alert('2')" href="#" href="#">
+	<area shape="circle" coords="100,350,30" id="area3" onclick="alert('3')" href="#">
+	<area shape="circle" coords="250,350,30" id="area4" onclick="alert('4')" href="#">
+</map>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',mapImg,false);
+window.addEventListener('resize',mapImg,false);
+
+function mapImg(){
+	var img =document.getElementById('mapAreaImg'),
+		area1=document.getElementById('area1'),
+		area2=document.getElementById('area2'),
+		area3=document.getElementById('area3'),
+		area4=document.getElementById('area4')
+		;
+		// 图片加在完后才能获取图片的宽高;页面加载时还没能获取到的.
+		var img2=new Image();
+		img2.onload=function(){
+	
+			var wN=img.naturalWidth;
+			var hN=img.naturalHeight;
+			var w=window.innerWidth;
+			var h=window.innerHeight;
+			var r=w/wN*30;
+			var coords1_w=w/wN*186;
+			var coords1_h=h/hN*410;
+			var coords2_w=w/wN*472;
+			var coords2_h=h/hN*410;
+			var coords3_w=w/wN*186;
+			var coords3_h=h/hN*680;
+			var coords4_w=w/wN*472;
+			var coords4_h=h/hN*680;
+			console.log(w+"_"+h);
+			area1.setAttribute('coords',coords1_w+','+coords1_h+','+r);
+			area2.setAttribute('coords',coords2_w+','+coords2_h+','+r);
+			area3.setAttribute('coords',coords3_w+','+coords3_h+','+r);
+			area4.setAttribute('coords',coords4_w+','+coords4_h+','+r);
+			
+		};
+		img2.src=img.src;
+
+};
+
+</script>
+</body>
+</html>
